@@ -6,6 +6,10 @@ Debe crear una base de datos llamada anime_store y dentro de ella, una colecció
 
 ## 1. Crear la base de datos anime_store y la colección products.
 
+```js
+// Creación y uso de la base de datos
+use("Anime_Store_DB");
+```
 
 ---
 
