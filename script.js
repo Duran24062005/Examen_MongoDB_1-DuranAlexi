@@ -362,4 +362,85 @@ db.products.updateMany(
 
 
 
+// =======================================
+// 7. Crear las siguientes consultas:
+// =======================================
+
+// - Mostrar los productos de la categoría "Mangas"
+db.products.find({category: "Mangas"});
+
+// - Mostrar los productos que tienen un precio mayor a 50000
+db.products.find({price: {$gt: 50000}});
+
+// - Mostrar los productos que no son de la categoría "Figuras"
+db.products.find({category: {$ne: "Figuras"}});
+
+// - Mostrar el sku, name y tags de los productos que tienen calificación mayor a 4.5.
+db.products.find({rating: {$gt: 4.5}}, {"sku": 1, "name": 1});
+
+// - Mostrar sku, name, y price de los productos con stock menor a 5.
+db.products.find({stock: {$lt: 5}}, {sku: 1, name: 1, price: 1});
+
+
+
+
+// =======================================
+// 8. Eliminar la propiedad available de todos los documentos.
+// =======================================
+db.products.updateMany({}, {$unset: {"available": ""}});
+
+
+
+// =======================================
+// 9. Eliminar el tag "descuento" del producto con sku: A025.
+// =======================================
+db.products.update(
+    {}, 
+    {
+        $pull: {
+            tags: "descuento"
+        }
+    }
+);
+
+
+// =======================================
+// 10. Eliminar los tags "nuevo" y "popular" del producto con sku: A012.
+// =======================================
+db.products.update(
+    {},
+    {
+        $pull: {
+            $each: {
+                tags: ["nuevo", "popular"]
+            }
+        }
+    }
+);
+
+
+// =======================================
+// 11. Eliminar el producto con sku: A043.
+// =======================================
+db.products.deleteOne({sku: "A043"});
+
+
+// =======================================
+// 12. Eliminar todos los productos con stock igual a 0.
+// =======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Desarrollado por Alexi Durán Gómez C.c:  1.067.031.983
