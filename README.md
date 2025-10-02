@@ -1,6 +1,6 @@
 # Examen_MongoDB_1-DuranAlexi
 
-Debe crear una base de datos llamada anime_store y dentro de ella, una colección llamada products. Aquí es donde se cargarán los registros de productos de la tienda. (Recurso: data_products_anime)
+Debe crear una base de datos llamada anime_store y dentro de ella, una colección llamada products. Aquí es donde se cargarán los registros de productos de la tienda. (Recurso: [data_products_anime](https://drive.google.com/file/d/1FDpFV37htNRDTCpJj5w781oOCmKTBZX0/view))
 
 
 
